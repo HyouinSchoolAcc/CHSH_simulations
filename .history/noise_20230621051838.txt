@@ -1,0 +1,5 @@
+noise models
+bit flip
+decoherance
+shot noise 
+loss 

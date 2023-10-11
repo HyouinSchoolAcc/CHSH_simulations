@@ -1,0 +1,20 @@
+noise models
+bit flip
+decoherance
+shot noise 
+loss 
+
+Procedures:
+1. Generate matrix 10000 times
+2. Calculate optimal CHSH inequailty of this matrix
+3. Use a convolutional net to predict the best output value depending on the matrix
+    Goal: predict the optimal CHSH value of an arbitrary density matrix
+
+1. Genereate arbitrary density matrix
+2. Write a function that calculates CHSH based on a set of angles
+3. Using 20 randomly chosen angles, generate 20 CHSH values
+4. Using these 20 CHSH outputs and the corresponding angles to form a nerual network
+    Goal: generatelize a 20 measurement protocol for maxim CHSH estimation
+
+1. Introduce noise to the density matrix
+2. Using the density matrix, and the noise, to catagorize the noise after computing its CHSH.

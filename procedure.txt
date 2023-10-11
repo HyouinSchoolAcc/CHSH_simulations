@@ -1,0 +1,3 @@
+20 data points of (a, b, a', b') with the respective CHSH value, V
+so in total, 100 data points
+We assign an optimal CHSH inequality achievable using these data.
