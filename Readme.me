@@ -33,7 +33,14 @@ matrix+measurement+CHSH+noise.py
 
 }
 
-## How to use:
-Run matrix+CHSH_generation.py, changing the destination to the data's destination once, and to test once.
+## How to verify:
+1. install python packages pytorch, optuna, numpy, scipy, and other packages that may be missing
+2. Run matrix+CHSH_generation.py, changing the filepath to the data's destination once, and to test once.
 (run matrix+CHSH_generation.py twice, once to generate data, once to test the model)
-Run the 
+3. Run optuna_multi_layer_model.py, changing the file path of both test and source model accordingly.
+
+##How to train:
+1. install  python packages pytorch, optuna, numpy, scipy, and other packages that may be missing
+2. pick your model of choice, and run the corresponding file
+3. change the file path of both test and source model accordingly.
+4. If you wish to save the model and not running multi_layer, copy multi_layer's save model code into your file.
