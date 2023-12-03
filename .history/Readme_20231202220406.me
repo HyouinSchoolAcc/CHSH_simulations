@@ -1,0 +1,37 @@
+## Objective
+The objective of this project is to create a tool that can identify based on theoretical prepared state and some measurement angles to determine the optimal CHSH inequality and the corresponding noise associated.
+
+## Use of each file:
+matrix+CHSH_generation.py: This file generates a standard density matrix and computes its CHSH mathmatically
+#the following files are used for predicing CHSH value from input density matrix
+{
+    model_simple_neural.py: This file uses a simple neural network to predict the CHSH value of a density matrix
+        results:at max 66% accuracy on test set 
+    convol.py: This file uses a convolutional neural network to predict the CHSH value of a density matrix
+        results:not good 
+    optuna_simple_model.py: This file uses optuna to optimize the simple neural network
+        results:has been demonstrated to achieve 1.00 accuracy on test set,though result not saved
+    optuna_multi_layer_model.py: This file uses optuna to optimize the convolutional neural network
+        results:has produced many models that can achieve >95% accuracy on test set
+    test_base_CHSH.py: This file uses the optuna_multi_layer_model.py's model.
+        #note: the multiple layer models have different parameters, so using different models will require the use to adjust the layer sizes manually in the variable Layer_Sizes.
+}
+matrix+measurement+CHSH.py
+#the following files are used for predicing CHSH values from the measured outputs alone
+{
+    //Tobedone 
+}
+matrix+measurement+CHSH+noise.py
+#the following files are taking in (matrix, measured values) to predict the noise source, of which are:
+    angle uncertainty(measurement angle+=random(0,0.1))
+    shotnoise uncertainty(measured value+=random(0,0.1))
+    phase change uncertainty(densty matrix elements go through a phase change = e**(random(0,0.1)))
+{
+    //Tobedone
+
+}
+
+## How to use:
+Run matrix+CHSH_generation.py, changing the destination to the data's destination once, and to test once.
+(run matrix+CHSH_generation.py twice, once to generate data, once to test the model)
+Run the 

@@ -114,5 +114,5 @@ for key, value in trial.params.items():
 128, 'lr': 0.0015010397675281019, 'epochs': 50}. Best is trial 13 with value: 0.9975490196078433.
 Correlation: 0.81
 [I 2023-08-18 22:47:05,344] Trial 14 finished with value: 0.8137254901960784 and parameters: {'hidden_dim': 
-127, 'lr': 1.375053375372561e-05, 'epochs': 38}. Best is trial 13 with value: 0.9975490196078433.
+127, 'lr': 1.375053375372561e-05, 'epochs': 38} .Best is trial 13 with value: 0.9975490196078433.
 Correlation: 1.00"""

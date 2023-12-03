@@ -40,8 +40,8 @@ class MyDataset(Dataset):
                 self.data.append(sample)
 
 # Creating instances for training and testing datasets
-train_file_path = r"c:\Users\17536\Desktop\CHSH\data.txt"
-test_file_path = r"c:\Users\17536\Desktop\CHSH\test.txt"
+train_file_path = r"c:\Users\17536\Desktop\CHSH\data\data.txt"
+test_file_path = r"c:\Users\17536\Desktop\CHSH\data\test.txt"
 
 train_dataset = MyDataset(train_file_path)
 test_dataset = MyDataset(test_file_path)
@@ -96,7 +96,7 @@ def objective(trial):
 
     if correlation > 0.95:
         # Save the best model
-        torch.save(model.state_dict(), f'best_model_trial_{trial.number}.pth')
+        torch.save(model.state_dict(), f'saved_models/best_model_trial_{trial.number}.pth')
 
     return correlation
 
