@@ -16,27 +16,8 @@ def generate_psd_matrix_with_eigenvalues():
     matrix = pre_processed_matrix/sum(np.linalg.eigvals(pre_processed_matrix))
     return (matrix)
 
-matrix = generate_psd_matrix_with_eigenvalues()
-print (np.round(np.linalg.eigvals(matrix),decimals=2))
-print (np.round(matrix, decimals=2))
 
-#write the kroniker matrix 
-sigma_x = np.array([[0, 1], [1, 0]])
-sigma_y = np.array([[0, -1j], [1j, 0]])
-sigma_z = np.array([[1, 0], [0, -1]])
-identity = np.eye(2)
-T_11=np.kron(sigma_x, sigma_x)
-T_12=np.kron(sigma_x, sigma_y)
-T_13=np.kron(sigma_x, sigma_z)
-T_21=np.kron(sigma_y, sigma_x)
-T_22=np.kron(sigma_y, sigma_y)
-T_23=np.kron(sigma_y, sigma_z)
-T_31=np.kron(sigma_z, sigma_x)
-T_32=np.kron(sigma_z, sigma_y)
-T_33=np.kron(sigma_z, sigma_z)
-T = np.zeros((3, 3), dtype=np.complex128)
-for a in range (10000):
-    matrix = generate_psd_matrix_with_eigenvalues()
+def CHSH_val_calc(matrix, T_11, T_12, T_13, T_21, T_22, T_23, T_31, T_32, T_33):
     T = np.zeros((3, 3), dtype=np.complex128)
     T[0,0]=np.trace(np.dot(np.array(T_11),np.array(matrix)))
     T[0,1]=np.trace(np.dot(np.array(T_12),np.array(matrix)))
@@ -59,14 +40,42 @@ for a in range (10000):
     # Get the square root of the sum
     result = 2*math.sqrt(sum_of_squares)
 
+    return result
+
+
+matrix = generate_psd_matrix_with_eigenvalues()
+print (np.round(np.linalg.eigvals(matrix),decimals=2))
+print (np.round(matrix, decimals=2))
+
+#write the kroniker matrix 
+sigma_x = np.array([[0, 1], [1, 0]])
+sigma_y = np.array([[0, -1j], [1j, 0]])
+sigma_z = np.array([[1, 0], [0, -1]])
+identity = np.eye(2)
+T_11=np.kron(sigma_x, sigma_x)
+T_12=np.kron(sigma_x, sigma_y)
+T_13=np.kron(sigma_x, sigma_z)
+T_21=np.kron(sigma_y, sigma_x)
+T_22=np.kron(sigma_y, sigma_y)
+T_23=np.kron(sigma_y, sigma_z)
+T_31=np.kron(sigma_z, sigma_x)
+T_32=np.kron(sigma_z, sigma_y)
+T_33=np.kron(sigma_z, sigma_z)
+T = np.zeros((3, 3), dtype=np.complex128)
+
+for a in range (10000):
+    matrix = generate_psd_matrix_with_eigenvalues()
+    result = CHSH_val_calc(matrix, T_11, T_12, T_13, T_21, T_22, T_23, T_31, T_32, T_33)
     print(result)
+
+
     real_part = np.real(matrix)
     imaginary_part = np.imag(matrix)
 
     # Create a 2-channel 4x4 input image
     input_image = np.stack([real_part, imaginary_part], axis=2)
 
-    file_path = r"c:\Users\17536\Desktop\CHSH\data.txt"
+    file_path = r"data\data.txt"
     #file_path = r"c:\Users\17536\Desktop\CHSH\test.txt"
     with open(file_path, 'a') as f:
         # Write the matrix
@@ -79,3 +88,6 @@ for a in range (10000):
         f.write(str(result)+"\n")
 
     print("Data written to file:", file_path)
+
+
+
