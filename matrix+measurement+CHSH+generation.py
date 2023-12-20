@@ -109,6 +109,8 @@ for a in range (10000):
     result.append(function_2(0, 67.5, matrix))
     result.append(function_2(302.6487, 80.4775, matrix))
     result.append(function_2(199.3459, 307.7366, matrix))
+    result.append(function_2(221.461, 99.953, matrix))
+    result.append(function_2(13.686,140.040, matrix))
     results.append(np.array(result).flatten()) #results should now have a 20-element array, this should be written to the file and the output be the CHSH value.
     result.clear()
     #write the results to a file
@@ -121,8 +123,36 @@ for a in range (10000):
             # Adding a semicolon and then the CHSH value
     
             file.write("; " + str(CHSH_result) + "\n")
-            print(res)
-    print("Data written to file:", file_path)
-    print(CHSH_result)
+    #         print(res)
+    # print("Data written to file:", file_path)
+    # print(CHSH_result)
+
+    results.clear()
+for a in range (500):
+    matrix = generate_psd_matrix_with_eigenvalues()
+    CHSH_result = CHSH_val_calc(matrix, T_11, T_12, T_13, T_21, T_22, T_23, T_31, T_32, T_33)
+    result.append(function_2(0, 22.5, matrix))
+    result.append(function_2(0, 67.5, matrix))
+    result.append(function_2(45, 22.5, matrix))
+    result.append(function_2(0, 67.5, matrix))
+    result.append(function_2(302.6487, 80.4775, matrix))
+    result.append(function_2(199.3459, 307.7366, matrix))
+    result.append(function_2(221.461, 99.953, matrix))
+    result.append(function_2(13.686,140.040, matrix))
+    results.append(np.array(result).flatten()) #results should now have a 20-element array, this should be written to the file and the output be the CHSH value.
+    result.clear()
+    #write the results to a file
+    #now we will add in the results value to the file, and then the CHSH value, alternating
+    file_path = r"data\measure_test.txt"
+    with open(file_path, "a") as file:
+        for res in results:
+            # Writing the 20-element array
+            file.write(", ".join(map(str, res)))
+            # Adding a semicolon and then the CHSH value
+    
+            file.write("; " + str(CHSH_result) + "\n")
+    #         print(res)
+    # print("Data written to file:", file_path)
+    # print(CHSH_result)
 
     results.clear()

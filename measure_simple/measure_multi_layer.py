@@ -55,7 +55,7 @@ def objective(trial):
     # Dynamic MLP architecture
     n_layers = trial.suggest_int('n_layers', 1, 3)
     layers = []
-    in_features = 24  # Adjust this according to your input features
+    in_features = 32  # Adjust this according to your input features
     for i in range(n_layers):
         out_features = trial.suggest_int(f'n_units_l{i}', 4, 128)
         layers.append(nn.Linear(in_features, out_features))
