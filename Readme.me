@@ -17,11 +17,15 @@ matrix+CHSH_generation.py: This file generates a standard density matrix and com
         #note: the multiple layer models have different parameters, so using different models will require the use to adjust the layer sizes manually in the variable Layer_Sizes.
 }
 
-matrix+measurement+CHSH.py
+matrix+measurement+CHSH+generation.py: this generates 32 inputs and correlates with one CHSH output
+        note: the angles are 4 sets from naive CHSH angles and 4 sets from randomly generated angles
 #the following files are used for predicing CHSH values from the measured outputs alone
 {
-    //Tobedone 
+
+    measure_simple/measure_multi_layer.py: this is the training from 32 inputs and one CHSH output
 }
+#note: The current best model only achieves 83% during training, which is terrible. I'll look for ways to increase
+the chances as the school year starts and I can have some eyes from friends who also does ML.
 
 matrix+measurement+CHSH+noise.py
 #the following files are taking in (matrix, measured values) to predict the noise source, of which are:

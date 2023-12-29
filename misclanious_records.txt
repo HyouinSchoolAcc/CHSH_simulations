@@ -1,1 +1,45 @@
 The following are the results of measure_multi_layer, with 24 parameters.
+
+The following are the results of measure_multi_layer, with 32 parameters. 
+[I 2023-12-20 23:21:11,509] Trial 0 finished with value: 0.8381136884547539 and parameters: {'n_layers': 4, 'n_units_l0': 45, 'n_units_l1': 111, 'n_units_l2': 58, 'n_units_l3': 8, 'lr': 5.918725597916642e-05}. Best is trial 0 with value: 0.8381136884547539.
+c:\Users\yueze\Desktop\CHSH_simulations\measure_simple\measure_multi_layer.py:106: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be 
+removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+  optimizer = optim.Adam(model.parameters(), lr=trial.suggest_loguniform('lr', 1e-5, 1e-1))
+[I 2023-12-20 23:23:26,789] Trial 1 finished with value: 0.7990807963231853 and parameters: {'n_layers': 2, 'n_units_l0': 84, 'n_units_l1': 106, 'lr': 1.5309885410563537e-05}. Best is trial 0 with value: 0.8381136884547539.
+[I 2023-12-20 23:26:02,936] Trial 2 finished with value: 0.8304633417844876 and parameters: {'n_layers': 3, 'n_units_l0': 115, 'n_units_l1': 105, 'n_units_l2': 47, 'lr': 0.0009945277194357194}. Best is trial 0 with value: 0.8381136884547539.
+[I 2023-12-20 23:27:51,467] Trial 3 finished with value: 0.8321196164784659 and parameters: {'n_layers': 2, 'n_units_l0': 45, 'n_units_l1': 33, 'lr': 0.0002462639666021678}. Best is trial 0 with value: 0.8381136884547539.
+[I 2023-12-20 23:29:39,504] Trial 4 finished with value: 0.8253552374209496 and parameters: {'n_layers': 2, 'n_units_l0': 28, 'n_units_l1': 72, 'lr': 0.0001522762292180475}. Best is trial 0 with value: 0.8381136884547539.
+[I 2023-12-20 23:32:48,989] Trial 5 finished with value: 0.8371373645494582 and parameters: {'n_layers': 5, 'n_units_l0': 21, 'n_units_l1': 30, 'n_units_l2': 72, 'n_units_l3': 112, 'n_units_l4': 44, 'lr': 0.00029676645226616545}. Best is trial 0 with value: 0.8381136884547539.
+[I 2023-12-20 23:35:19,305] Trial 6 finished with value: 0.8196308761081423 and parameters: {'n_layers': 3, 'n_units_l0': 93, 'n_units_l1': 90, 'n_units_l2': 41, 'lr': 0.006631935131035866}. Best is trial 0 with value: 0.8381136884547539.
+[I 2023-12-20 23:38:43,201] Trial 7 finished with value: 0.8303257533030132 and parameters: {'n_layers': 5, 'n_units_l0': 88, 'n_units_l1': 54, 'n_units_l2': 115, 'n_units_l3': 84, 'n_units_l4': 21, 'lr': 8.86431245342433e-05}. Best is trial 0 with value: 0.8381136884547539.
+[I 2023-12-20 23:40:53,554] Trial 8 finished with value: 0.8215127509303988 and parameters: {'n_layers': 3, 'n_units_l0': 12, 'n_units_l1': 29, 'n_units_l2': 96, 'lr': 0.006206502743094216}. Best is trial 0 with value: 0.8381136884547539.
+[I 2023-12-20 23:44:29,979] Trial 9 finished with value: 0.8276066384265537 and parameters: {'n_layers': 5, 'n_units_l0': 31, 'n_units_l1': 15, 'n_units_l2': 33, 'n_units_l3': 6, 'n_units_l4': 122, 'lr': 0.00028875772592599716}. Best is trial 0 with value: 0.8381136884547539.
+[I 2023-12-20 23:49:32,473] Trial 10 finished with value: 0.805315349261397 and parameters: {'n_layers': 4, 'n_units_l0': 59, 'n_units_l1': 117, 'n_units_l2': 14, 'n_units_l3': 14, 'lr': 1.7412784281478884e-05}. Best is trial 0 with value: 0.8381136884547539.
+C:\Users\yueze\anaconda3\Lib\site-packages\scipy\stats\_stats_py.py:5445: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  warnings.warn(stats.ConstantInputWarning(warn_msg))
+[W 2023-12-20 23:53:55,377] Trial 11 failed with parameters: {'n_layers': 4, 'n_units_l0': 7, 'n_units_l1': 56, 'n_units_l2': 79, 'n_units_l3': 126, 'lr': 0.08657041326348147} because of the following error: The value nan is not acceptable.
+[W 2023-12-20 23:53:55,378] Trial 11 failed with value nan.
+[I 2023-12-20 23:58:37,286] Trial 12 finished with value: 0.8158012792051168 and parameters: {'n_layers': 4, 'n_units_l0': 23, 'n_units_l1': 53, 'n_units_l2': 78, 'n_units_l3': 121, 'lr': 0.0012002589900732298}. Best is trial 0 with value: 0.8381136884547539.
+[W 2023-12-21 00:03:41,718] Trial 13 failed with parameters: {'n_layers': 5, 'n_units_l0': 5, 'n_units_l1': 127, 'n_units_l2': 69, 'n_units_l3': 56, 'n_units_l4': 47, 'lr': 0.05455559786658461} because of the following error: The value nan is not acceptable.
+[W 2023-12-21 00:03:41,719] Trial 13 failed with value nan.
+[I 2023-12-21 00:08:50,021] Trial 14 finished with value: 0.7154647498589994 and parameters: {'n_layers': 5, 'n_units_l0': 5, 'n_units_l1': 6, 'n_units_l2': 71, 'n_units_l3': 65, 'n_units_l4': 45, 'lr': 4.0240697133714546e-05}. Best is trial 0 with value: 0.8381136884547539.
+[W 2023-12-21 00:14:15,688] Trial 15 failed with parameters: {'n_layers': 4, 'n_units_l0': 49, 'n_units_l1': 84, 'n_units_l2': 63, 'n_units_l3': 48, 'lr': 0.08755953730001802} because of the following error: The value nan is not acceptable.
+[W 2023-12-21 00:14:15,689] Trial 15 failed with value nan.
+[W 2023-12-21 00:17:15,852] Trial 16 failed with parameters: {'n_layers': 4, 'n_units_l0': 53, 'n_units_l1': 79, 'n_units_l2': 62, 'n_units_l3': 54, 'lr': 0.06626191193676956} because of the following error: The value nan is not acceptable.
+[W 2023-12-21 00:17:15,853] Trial 16 failed with value nan.
+[I 2023-12-21 00:20:18,084] Trial 17 finished with value: 0.8305743942975771 and parameters: {'n_layers': 4, 'n_units_l0': 61, 'n_units_l1': 127, 'n_units_l2': 61, 'n_units_l3': 55, 'lr': 0.0009443057789025615}. Best is trial 0 with value: 0.8381136884547539.
+[W 2023-12-21 00:23:58,651] Trial 18 failed with parameters: {'n_layers': 5, 'n_units_l0': 45, 'n_units_l1': 75, 'n_units_l2': 92, 'n_units_l3': 125, 'n_units_l4': 84, 'lr': 0.06781885233362377} because of the following error: The value nan is not acceptable.
+[W 2023-12-21 00:23:58,652] Trial 18 failed with value nan.
+[W 2023-12-21 00:27:36,764] Trial 19 failed with parameters: {'n_layers': 5, 'n_units_l0': 45, 'n_units_l1': 73, 'n_units_l2': 94, 'n_units_l3': 116, 'n_units_l4': 81, 'lr': 0.02431979168834456} because of the following error: The value nan is not acceptable.
+[W 2023-12-21 00:27:36,765] Trial 19 failed with value nan.
+[I 2023-12-21 00:31:16,961] Trial 20 finished with value: 0.6773269399403561 and parameters: {'n_layers': 5, 'n_units_l0': 44, 'n_units_l1': 75, 'n_units_l2': 90, 'n_units_l3': 128, 'n_units_l4': 80, 'lr': 0.02069276704304928}. Best is trial 0 with value: 0.8381136884547539.
+[W 2023-12-21 00:34:07,043] Trial 21 failed with parameters: {'n_layers': 4, 'n_units_l0': 46, 'n_units_l1': 50, 'n_units_l2': 60, 'n_units_l3': 96, 'lr': 0.09465832631993808} because of the following error: The value nan is not acceptable.
+[W 2023-12-21 00:34:07,044] Trial 21 failed with value nan.
+[I 2023-12-21 00:36:48,406] Trial 22 finished with value: 0.8314010536042143 and parameters: {'n_layers': 4, 'n_units_l0': 52, 'n_units_l1': 48, 'n_units_l2': 58, 'n_units_l3': 39, 'lr': 6.330273049230853e-05}. Best is trial 0 with value: 0.8381136884547539.
+[I 2023-12-21 00:40:37,604] Trial 23 finished with value: 0.8378863595454381 and parameters: {'n_layers': 5, 'n_units_l0': 72, 'n_units_l1': 89, 'n_units_l2': 119, 'n_units_l3': 101, 'n_units_l4': 72, 'lr': 0.0003781449408827447}. Best is trial 0 with value: 0.8381136884547539.
+[I 2023-12-21 00:43:52,585] Trial 24 finished with value: 0.8251129087802345 and parameters: {'n_layers': 4, 'n_units_l0': 76, 'n_units_l1': 88, 'n_units_l2': 125, 'n_units_l3': 77, 'lr': 0.003453564315036045}. Best is trial 0 with value: 0.8381136884547539.
+[I 2023-12-21 00:47:45,912] Trial 25 finished with value: 0.8311637406549626 and parameters: {'n_layers': 5, 'n_units_l0': 121, 'n_units_l1': 92, 'n_units_l2': 96, 'n_units_l3': 94, 'n_units_l4': 93, 'lr': 4.4778531130378926e-05}. Best is trial 0 with value: 0.8381136884547539.
+[W 2023-12-21 00:50:40,764] Trial 26 failed with parameters: {'n_layers': 4, 'n_units_l0': 106, 'n_units_l1': 106, 'n_units_l2': 20, 'n_units_l3': 35, 'lr': 0.08833280256204158} because of the following error: The value nan is not acceptable.
+[W 2023-12-21 00:50:40,765] Trial 26 failed with value nan.
+[W 2023-12-21 00:53:39,332] Trial 27 failed with parameters: {'n_layers': 4, 'n_units_l0': 101, 'n_units_l1': 105, 'n_units_l2': 8, 'n_units_l3': 33, 'lr': 0.060843045226638866} because of the following error: The value nan is not acceptable.
+[W 2023-12-21 00:53:39,333] Trial 27 failed with value nan.
