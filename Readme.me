@@ -22,12 +22,11 @@ matrix+measurement+CHSH+generation.py: this generates 32 inputs and correlates w
 #the following files are used for predicing CHSH values from the measured outputs alone
 {
 
-    measure_simple/measure_multi_layer.py: this is the training from 32 inputs and one CHSH output
+    measure_simple/measure_multi_layer.py: this is the training from 32 inputs and one CHSH output using deep nets, accuracy:0.8331
+    measure_random_forest.py: this is training from the same dataset using random forest, accuracy:0.76
 }
 #note: The current best model only achieves 83% during training, which is terrible. I'll look for ways to increase
-the chances more aimed when the school starts, in particular trying some statistical methods with 
-random forest and SVD as well as some other potential algorithms, but I'll keep an eye out for them 
-while reading papers.
+the chances more.
 
 matrix+measurement+CHSH+noise.py
 #the following files are taking in (matrix, measured values) to predict the noise source, of which are:
